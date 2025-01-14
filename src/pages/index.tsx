@@ -3,11 +3,7 @@ import { LoginForm } from "../components/blocks/login-form";
 import { useTheme } from "../hooks/use-theme";
 
 function Index() {
-  const { theme, setTheme } = useTheme();
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
+  const { theme } = useTheme();
 
   return (
     <main className={`h-screen w-full ${theme === 'dark' ? 'bg-neutral-950 text-white' : 'bg-white text-black'} flex items-center justify-center`}>

@@ -3,6 +3,7 @@ import "@radix-ui/themes/styles.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/index";
 import NotFound from "./pages/NotFound";
+import LoginPage from "./pages/login";
 import { useTheme } from "./hooks/use-theme";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
